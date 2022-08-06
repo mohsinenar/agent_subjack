@@ -37,7 +37,7 @@ class SubJakAgent(agent.Agent, vuln_mixin.AgentReportVulnMixin, persist_mixin.Ag
         """Procces only message of type v3.asset.domain_name"""
         domain_name = message.data.get("name")
         if domain_name is not None:
-            if self.set_add(b'agent_subjack', f'domain_name'):
+            if self.set_add(b'agent_subjack', f'{domain_name}'):
                 logger.info('proccessing domain name: %s', domain_name)
                 output_file = self._run_subjack_command(domain_name)
                 findings = self._parse_subjack_output(output_file)
