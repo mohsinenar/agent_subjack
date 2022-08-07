@@ -27,7 +27,7 @@ for [Subjack](https://github.com/haccer/subjack) (Subdomain Takeover tool).
 To perform your first scan, simply run the following command.
 
 ```shell
-ostorlab scan run --install --agent agent//subjack domain-name example.com
+ostorlab scan run --install --agent agent/mohsinenar/subjack domain-name example.com
 ```
 
 This command will download and install `agent/mohsinenar/subjack` and target domain `example.com`.
